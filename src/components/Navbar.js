@@ -41,6 +41,11 @@ function NavBar(props) {
                 Wikipedia
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/translate">
+                Translate
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

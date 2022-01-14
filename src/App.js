@@ -4,7 +4,9 @@ import { Route } from "./components/CustomRouter";
 import UnsplashSearchEngin from "./components/UnsplashSearchEngin";
 import YouTubeSearchEngin from "./components/YouTubeSearchEngin";
 import GeoLocation from "./components/GeoLocation";
-import WikipediaSearchEngin from './components/WikipediaSearchEngin'
+import WikipediaSearchEngin from "./components/WikipediaSearchEngin";
+import GoogleTranslate from "./components/GoogleTranslate";
+import { LANGUAGES } from "./static/Data";
 
 const App = () => {
   return (
@@ -23,6 +25,9 @@ const App = () => {
         </Route>
         <Route path="/wikipedia">
           <WikipediaSearchEngin />
+        </Route>
+        <Route path="/translate">
+          <GoogleTranslate languages={LANGUAGES} />
         </Route>
       </div>
     </>
