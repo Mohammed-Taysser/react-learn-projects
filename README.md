@@ -25,6 +25,7 @@ You will find a lot of projects build while learning React & Hooks such as `yout
 - [`Unsplash API`](https://unsplash.com/documentation#search)
 - [`Google Translate API`](https://cloud.google.com/translate/docs/reference/rest/v2/translate)
 - [`Youtube API`](https://developers.google.com/youtube/v3/docs/search/list)
+- [`Wikipedia API`](https://en.wikipedia.org/w/api.php)
 
 ## Important Updates
 
