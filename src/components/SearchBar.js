@@ -18,7 +18,7 @@ function SearchBar(props) {
   }, [debouncedQuery]);
 
   useEffect(() => {
-    if (query !== "") {
+    if (query !== "" && props.auto_submit) {
       props.onFormSubmit(query);
     }
   }, [query]);
@@ -67,6 +67,7 @@ SearchBar.defaultProps = {
   onFormSubmit: (data) => {
     console.log(data);
   },
+  auto_submit: true,
 };
 
 export default SearchBar;
