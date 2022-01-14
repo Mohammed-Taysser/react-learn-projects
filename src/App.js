@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar';
+import { Route } from './components/CustomRouter';
+import UnsplashSearchEngin from './components/UnsplashSearchEngin';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div className="container my-5 py-5">
+        <Route path='/'>
+          homepage
+        </Route>
+        <Route path='/unsplash'>
+          <UnsplashSearchEngin />
+        </Route>
+      </div>
+    </>
   );
 }
 

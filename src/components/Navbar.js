@@ -16,34 +16,14 @@ function NavBar(props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <Link className="navbar-brand" href="#">
-          LOGO
+        <Link className="navbar-brand" href="/">
+          HOME
         </Link>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" href="dropdown">
-                Dropdown
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="translation">
-                Translation
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/wikipedia">
-                Wikipedia
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/accordion">
-                Accordion
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/youtube">
-                Youtube
+              <Link className="nav-link" href="/unsplash">
+                Unsplash
               </Link>
             </li>
           </ul>
