@@ -26,6 +26,10 @@ You will find a lot of projects build while learning React & Hooks such as `yout
 - [`Google Translate API`](https://cloud.google.com/translate/docs/reference/rest/v2/translate)
 - [`Youtube API`](https://developers.google.com/youtube/v3/docs/search/list)
 
+## Important Updates
+
+- Due to unbelievable what happen to `faker.js` i create a folder call `static` with `data.js` file to be use as dummy data
+
 ## Available Scripts
 
 In the project directory, you can run:
