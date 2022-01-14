@@ -29,7 +29,7 @@ You will find a lot of projects build while learning React & Hooks such as `yout
 ## Important Updates
 
 - Due to unbelievable what happen to `faker.js` i create a folder call `static` with `data.js` file to be use as dummy data
-- For **`google translate app`** the key of this API can only be used when your browser is at `http://localhost:3000`. If you try to make a request to the API from any other address, the request will fail.
+- For **`Google Translate App`** the key of this API can only be used when your browser is at `http://localhost:3000`. If you try to make a request to the API from any other address, the request will fail.
 
 ## Available Scripts
 
