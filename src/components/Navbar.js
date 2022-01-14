@@ -36,6 +36,11 @@ function NavBar(props) {
                 GeoLocation
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/wikipedia">
+                Wikipedia
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
