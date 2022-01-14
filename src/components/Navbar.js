@@ -26,6 +26,11 @@ function NavBar(props) {
                 Unsplash
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/youtube">
+                Youtube
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
