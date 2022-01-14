@@ -29,6 +29,7 @@ You will find a lot of projects build while learning React & Hooks such as `yout
 ## Important Updates
 
 - Due to unbelievable what happen to `faker.js` i create a folder call `static` with `data.js` file to be use as dummy data
+- For **`google translate app`** the key of this API can only be used when your browser is at `http://localhost:3000`. If you try to make a request to the API from any other address, the request will fail.
 
 ## Available Scripts
 
@@ -46,15 +47,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 - [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 - [React documentation](https://reactjs.org/).
-
 - [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
 - [Analyzing the Bundle Size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
 - [Making a Progressive Web App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
 - [Advanced Configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 - [Deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
 - [`npm run build` fails to minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
