@@ -33,33 +33,40 @@ function SearchBar(props) {
   };
 
   return (
-    <form onSubmit={onFormSubmit}>
-      <div className="search-bar-container">
-        <div className="col">
-          <input
-            className="search-bar-input"
-            type="search"
-            placeholder={props.placeholder}
-            value={debouncedQuery}
-            onChange={OnInputChange}
-          />
+    <div className={props.className}>
+      <form onSubmit={onFormSubmit}>
+        <div className="search-bar-container">
+          <div className="col">
+            <input
+              className="search-bar-input"
+              type="search"
+              placeholder={props.placeholder}
+              value={debouncedQuery}
+              onChange={OnInputChange}
+            />
+          </div>
+          <div className="col-auto">
+            <button type="submit" className="btn btn-primary">
+              {props.label}
+            </button>
+          </div>
         </div>
-        <div className="col-auto">
-          <button type="submit" className="btn btn-primary">
-            {props.label}
-          </button>
-        </div>
-      </div>
-      <small className="text-muted mt-1">
-        {props.result_number ? <span>results: {props.result_number}</span> : null}
-      </small>
-    </form>
+        <small className="text-muted mt-1">
+          {props.result_number ? (
+            <span>results: {props.result_number}</span>
+          ) : null}
+        </small>
+      </form>
+    </div>
   );
 }
 
-SearchBar.defaultProps={
-  placeholder: 'search',
-  label: 'search',
-}
+SearchBar.defaultProps = {
+  placeholder: "search",
+  label: "search",
+  onFormSubmit: (data) => {
+    console.log(data);
+  },
+};
 
 export default SearchBar;
