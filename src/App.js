@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Route } from "./components/CustomRouter";
 import UnsplashSearchEngin from "./components/UnsplashSearchEngin";
 import YouTubeSearchEngin from "./components/YouTubeSearchEngin";
+import GeoLocation from './components/GeoLocation';
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
         </Route>
         <Route path="/youtube">
           <YouTubeSearchEngin />
+        </Route>
+        <Route path="/goelocation">
+          <GeoLocation />
         </Route>
       </div>
     </>
