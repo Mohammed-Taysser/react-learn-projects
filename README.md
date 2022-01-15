@@ -6,7 +6,7 @@ At first this project was bootstrapped with [Create React App](https://github.co
 
 You will find a lot of projects build while learning React & Hooks such as `youtube api`, `wikipedia api` and more. feel free to take a look 😉
 
-for [live demo at vercel](https://react-projects-udemy.vercel.app/)
+for [live demo at `vercel`](https://react-projects-udemy.vercel.app/)
 
 ## Some topic
 
