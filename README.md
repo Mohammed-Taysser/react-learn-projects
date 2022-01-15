@@ -57,8 +57,8 @@ Deploy the current directory
 
 ### `vercel --prod`
 
- Create a production deployment
- 
+Create a production deployment
+
 ## Learn More
 
 - [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
