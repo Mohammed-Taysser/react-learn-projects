@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 /** 
  *- TODO : add document event to close dropdown when click on other location
