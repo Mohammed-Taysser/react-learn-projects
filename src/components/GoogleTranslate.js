@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Dropdown from "./Dropdown";
 import SearchBar from "./SearchBar";
 import Translate from '../api/Translate';
