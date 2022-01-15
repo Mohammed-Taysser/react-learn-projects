@@ -1,92 +1,77 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useVideos } from "../hooks/useYoutube";
 import SearchBar from "./SearchBar";
-import Youtube from "../api/Youtube";
 import Spinner from "./Spinner";
 
-class YouTubeSearchEngin extends React.Component {
-  state = {
-    videos: [],
-    current_video: {},
-  };
+const YouTubeSearchEngin = () => {
+  const [currentVideo, setCurrentVideo] = useState(null);
+  const [videos, search] = useVideos("react");
 
-  componentDidMount() {
-    this.onFormSubmit("react course");
-  }
-  onVideoClick = (clicked_video) => {
-    this.setState({ current_video: clicked_video });
-  };
+  useEffect(() => {
+    setCurrentVideo(videos[0]);
+  }, [videos]);
 
-  onFormSubmit = async (query) => {
-    if (query) {
-
-      await Youtube.get("/search", {
-        params: { q: query },
-      })
-        .then((response) => {
-          // console.log(response.data.items[0]);
-          this.setState({
-            videos: response.data.items,
-            current_video: response.data.items[0],
-          });
-        })
-        .catch((error) => {
-          // handle error
-        })
-        .then(() => {
-          // always executed
-        });
-    } else {
-      console.log(query); // no query entered
-    }
-  };
-
-  view_message() {
-    if (Object.keys(this.state.current_video).length > 0) {
+  const view_message = () => {
+    if (currentVideo) {
       return (
         <div className="row justify-content-center">
           <div className="col-lg-7 my-3">
-            <div className="ratio ratio-16x9">
-              <iframe
-                src={`https://www.youtube.com/embed/${this.state.current_video.id.videoId}`}
-                title={this.state.current_video.snippet.title}
-              ></iframe>
+            <div className="card border-0">
+              <div className="ratio ratio-16x9">
+                <iframe
+                  src={`https://www.youtube.com/embed/${currentVideo.id.videoId}`}
+                  title={currentVideo.snippet.title}
+                ></iframe>
+              </div>
+              <div className="card-body border mt-1">
+                <h4 className="card-title">{currentVideo.snippet.title}</h4>
+                <p className="card-text">{currentVideo.snippet.description}</p>
+              </div>
             </div>
           </div>
           <div className="col-lg-5 my-3">
-            {this.state.videos.map((video) => {
-              return <VideoItem video={video} onClick={this.onVideoClick} />;
+            {videos.map((video) => {
+              return (
+                <VideoItem
+                  video={video}
+                  key={video.id.videoId}
+                  onClick={setCurrentVideo}
+                />
+              );
             })}
           </div>
         </div>
       );
     } else {
-      return <Spinner />;
+      return <Spinner className="mt-4" />;
     }
-  }
+  };
 
-  render() {
-    return (
-      <div className={``}>
-        <SearchBar
-          onFormSubmit={this.onFormSubmit}
-          result_number={this.state.videos.length}
-        />
-
-        {this.view_message()}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={``}>
+      <SearchBar onFormSubmit={search} result_number={videos.length} />
+      {view_message()}
+    </div>
+  );
+};
 
 const VideoItem = (props) => {
   return (
-    <div className="d-flex align-items-center mb-3" key={props.video.id.videoId} onClick={e=> props.onClick(props.video)} style={{cursor: 'pointer'}}>
+    <div
+      className="d-flex align-items-center mb-3 cursor-pointer"
+      onClick={(e) => props.onClick(props.video)}
+    >
       <div className="flex-shrink-0">
-        <img src={props.video.snippet.thumbnails.default.url} alt={props.video.snippet.title} />
+        <img
+          src={props.video.snippet.thumbnails.default.url}
+          alt={props.video.snippet.title}
+        />
       </div>
       <div className="flex-grow-1 mx-3">
         <h6> {props.video.snippet.title.slice(0, 50)} </h6>
-        <p className="text-muted small"> {`${props.video.snippet.description.slice(0, 50)}....`} </p>
+        <p className="text-muted small">
+          {`${props.video.snippet.description.slice(0, 50)} ...`}
+        </p>
       </div>
     </div>
   );
