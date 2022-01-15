@@ -8,7 +8,7 @@ You will find a lot of projects build while learning React & Hooks such as `yout
 
 for live demo
 - [vercel][vercel-live]
-- [netlify][netlify-live] [![Netlify Status](https://api.netlify.com/api/v1/badges/21e3e34a-6bf1-47f8-839e-de5099f9ce24/deploy-status)][netlify-live]
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/21e3e34a-6bf1-47f8-839e-de5099f9ce24/deploy-status)][netlify-live]
 
 [vercel-live]: https://react-projects-udemy.vercel.app/
 [netlify-live]: https://react-projects-udemy.netlify.app/
