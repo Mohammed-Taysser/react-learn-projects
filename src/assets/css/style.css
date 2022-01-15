@@ -2,7 +2,9 @@
   font-family: Tajawal;
   src: url("./../fonts/Tajawal-Regular.ttf");
 }
-
+.cursor-pointer{
+  cursor: pointer;
+}
 .masonry-container {
   column-gap: 0.5em;
   min-height: 50vh;
