@@ -51,6 +51,14 @@ Runs the app in the development mode. <http://localhost:3000>
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+### `vercel`
+
+Deploy the current directory
+
+### `vercel --prod`
+
+ Create a production deployment
+ 
 ## Learn More
 
 - [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
