@@ -7,7 +7,7 @@ At first this project was bootstrapped with [Create React App](https://github.co
 You will find a lot of projects build while learning React & Hooks such as `youtube api`, `wikipedia api` and more. feel free to take a look 😉
 
 for live demo
-- [vercel][vercel-live]
+- [![vercel](https://img.shields.io/badge/-vercel-05122A?style=for-the-badge&logo=vercel)][vercel-live]
 - [![Netlify Status](https://api.netlify.com/api/v1/badges/21e3e34a-6bf1-47f8-839e-de5099f9ce24/deploy-status)][netlify-live]
 
 [vercel-live]: https://react-projects-udemy.vercel.app/
