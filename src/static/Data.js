@@ -35,4 +35,47 @@ const LANGUAGES = [
   { label: "French", value: "fr" },
 ];
 
-export { QUESTIONS, DROPDOWN_ITEMS, LANGUAGES };
+const TASKS = [
+  {
+    body: "Learn React.js (JS Library)",
+    is_done: false,
+  },
+  {
+    body: "Learn Sass (Preprocessor)",
+    is_done: true,
+  },
+  {
+    body: "Learn Jest.js (Testing Framework)",
+    is_done: true,
+  },
+  {
+    body: "Learn Gulp.js (Task Runner)",
+    is_done: true,
+  },
+  {
+    body: "Learn Pug.js (Template Engin)",
+    is_done: true,
+  },
+  {
+    body: "Learn Bootstrap (CSS Framework)",
+    is_done: true,
+  },
+  {
+    body: "Learn JQuery (JS Library)",
+    is_done: true,
+  },
+  {
+    body: "Learn Javascript (Script Language)",
+    is_done: true,
+  },
+  {
+    body: "Learn CSS (Styled Language)",
+    is_done: true,
+  },
+  {
+    body: "Learn HTML (Markup Language)",
+    is_done: true,
+  },
+];
+
+export { QUESTIONS, DROPDOWN_ITEMS, LANGUAGES, TASKS };
