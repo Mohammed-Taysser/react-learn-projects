@@ -6,7 +6,8 @@ import YouTubeSearchEngin from "./components/YouTubeSearchEngin";
 import GeoLocation from "./components/GeoLocation";
 import WikipediaSearchEngin from "./components/WikipediaSearchEngin";
 import GoogleTranslate from "./components/GoogleTranslate";
-import { LANGUAGES } from "./static/Data";
+import Todo from "./components/Todo";
+import { LANGUAGES, TASKS } from "./static/Data";
 
 const App = () => {
   return (
@@ -28,6 +29,9 @@ const App = () => {
         </Route>
         <Route path="/translate">
           <GoogleTranslate languages={LANGUAGES} />
+        </Route>
+        <Route path="/todo">
+          <Todo tasks={TASKS} />
         </Route>
       </div>
     </>

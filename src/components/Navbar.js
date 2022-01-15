@@ -46,6 +46,11 @@ function NavBar(props) {
                 Translate
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/todo">
+                Todo's
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
