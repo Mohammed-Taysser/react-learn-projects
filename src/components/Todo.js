@@ -68,6 +68,7 @@ const Todo = (props) => {
 
   return (
     <>
+      <h1 className="text-center mb-5"><i className="far fa-check-circle h2 m-0"></i>MyTodo's</h1>
       <SearchBar
         placeholder="Add New Task"
         label="Add"
