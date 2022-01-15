@@ -7,24 +7,28 @@ function SearchBar(props) {
   const [debouncedQuery, setDebouncedQuery] = useState(query);
 
   useEffect(() => {
-    if (debouncedQuery !== "") {
+    if (query !== "") {
       const timer_id = setTimeout(() => {
-        setQuery(debouncedQuery);
+        setDebouncedQuery(query);
       }, DELAY_TIME);
       return () => {
         clearTimeout(timer_id);
       };
     }
-  }, [debouncedQuery]);
-
-  useEffect(() => {
-    if (query !== "" && props.auto_submit) {
-      props.onFormSubmit(query);
-    }
   }, [query]);
 
+  useEffect(() => {
+    /*
+    ? Warning here because of using props on useEffect
+    ? but the solution is perfect (without props)
+    */
+    if (debouncedQuery !== "" && props.auto_submit) {
+      props.onFormSubmit(debouncedQuery);
+    }
+  }, [debouncedQuery]);
+
   const OnInputChange = (event) => {
-    setDebouncedQuery(event.target.value);
+    setQuery(event.target.value);
   };
 
   const onFormSubmit = (e) => {
@@ -41,7 +45,7 @@ function SearchBar(props) {
               className="search-bar-input"
               type="search"
               placeholder={props.placeholder}
-              value={debouncedQuery}
+              value={query}
               onChange={OnInputChange}
             />
           </div>
