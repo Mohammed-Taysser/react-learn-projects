@@ -25,7 +25,8 @@ const YouTubeSearchEngin = () => {
               </div>
               <div className="card-body border mt-1">
                 <h4 className="card-title">{currentVideo.snippet.title}</h4>
-                <p className="card-text">{currentVideo.snippet.description}</p>
+                <h6 className="card-subtitle mb-2 text-muted">{currentVideo.snippet.channelTitle}</h6>
+                <p className="card-text">{`By ${currentVideo.snippet.description} At ${currentVideo.snippet.publishTime}`}</p>
               </div>
             </div>
           </div>
