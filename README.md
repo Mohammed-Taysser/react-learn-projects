@@ -127,9 +127,9 @@ In the **project directory**, you can run:
 ## More Topics
 
 - [`Making a Progressive Web App`](https://create-react-app.dev/docs/making-a-progressive-web-app/)
-- <https://web.dev/progressive-web-apps/>
+- [`progressive-web-apps`](https://web.dev/progressive-web-apps/)
 - [`Title and Meta Tags`](https://create-react-app.dev/docs/title-and-meta-tags/)
 - [`Redux Documentation`](https://redux.js.org/introduction/getting-started)
 - [`React-Context`](https://reactjs.org/docs/context.html)
 - [`React-Hooks`](https://duckduckgo.com/?q=react+hooks&t=ffab&atb=v281-1&ia=web)
-- [Running Tests](https://create-react-app.dev/docs/running-tests)
+- [`Running Tests`](https://create-react-app.dev/docs/running-tests)
