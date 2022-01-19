@@ -39,6 +39,32 @@ for live demo
 - Due to unbelievable what happen to `faker.js` i create a folder call `static` with `data.js` file to be use as dummy data
 - For **`Google Translate App`** the key of this API can only be used when your browser is at `http://localhost:3000`. If you try to make a request to the API from any other address, the request will fail.
 
+## Want To Use On localhost
+
+### First Step
+
+Download the files from [releases](https://github.com/Mohammed-Taysser/react-learn-projects/releases) or clone it with **git** version control:
+
+```shell
+git clone https://github.com/Mohammed-Taysser/react-learn-projects.git
+```
+
+### Second Step
+
+install dependencies by
+
+```shell
+npm install
+```
+
+### Last Step 
+
+to start just run
+
+```shell
+npm start
+```
+
 ## Analyzing the Bundle Size
 
 ```shell
