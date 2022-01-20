@@ -21,35 +21,29 @@ function NavBar(props) {
         </Link>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link" href="/unsplash">
-                Unsplash
+            <li className="nav-item"> <Link className="nav-link" href="/goelocation"> GeoLocation </Link> </li>
+            <li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" href="#" id="api-projects" role="button" dataBsToggle="dropdown" ariaExpanded="false">
+                API
               </Link>
+              <ul className="dropdown-menu" aria-labelledby="api-projects">
+                <li><Link className="dropdown-item" href="/youtube">Youtube</Link></li>
+                <li><Link className="dropdown-item" href="/unsplash">Unsplash</Link></li>
+                <li><hr className="dropdown-divider" /></li>
+                <li><Link className="dropdown-item" href="/wikipedia">Wikipedia</Link></li>
+                <li><Link className="dropdown-item" href="/translate">Google Translate</Link></li>
+              </ul>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/youtube">
-                Youtube
+            <li className="nav-item"> <Link className="nav-link" href="/todo"> Todo's </Link> </li>
+            <li className="nav-item dropdown">
+              <Link className="nav-link dropdown-toggle" href="#" id="redux-projects" role="button" dataBsToggle="dropdown" ariaExpanded="false">
+                Redux
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/goelocation">
-                GeoLocation
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/wikipedia">
-                Wikipedia
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/translate">
-                Translate
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/todo">
-                Todo's
-              </Link>
+              <ul className="dropdown-menu" aria-labelledby="redux-projects">
+                <li><Link className="dropdown-item" href="/songs">Songs</Link></li>
+                <li><hr className="dropdown-divider"/></li>
+                <li><Link className="dropdown-item" href="/posts">Posts</Link></li>
+              </ul>
             </li>
           </ul>
         </div>
