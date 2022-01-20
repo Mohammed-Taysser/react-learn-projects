@@ -78,4 +78,19 @@ const TASKS = [
   },
 ];
 
-export { QUESTIONS, DROPDOWN_ITEMS, LANGUAGES, TASKS };
+const SONGS = [
+  {
+    title: 'No Scrubs',
+    duration: '4:06',
+  },
+  {
+    title: 'All Star',
+    duration: '7:08',
+  },
+  {
+    title: 'I Want This Way',
+    duration: '1:03',
+  },
+];
+
+export { QUESTIONS, DROPDOWN_ITEMS, LANGUAGES, TASKS, SONGS };
