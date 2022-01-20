@@ -37,6 +37,10 @@ const Link = (props) => {
       href={props.href}
       className={`${props.className}`}
       onClick={onLikClick}
+      id={props.id}
+      role={props.role}
+      data-bs-toggle={props.dataBsToggle}
+      aria-expanded={props.ariaExpanded}
     >
       {props.children}
     </a>
