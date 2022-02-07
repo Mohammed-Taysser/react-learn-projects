@@ -14,6 +14,8 @@ function mainCard(props) {
         <h5 className='card-title'>
           <a
             href={`https://www.youtube.com/watch?v=${currentVideo.id.videoId}`}
+            target='_blank'
+            rel='noreferrer'
             className='text-dark text-decoration-none'
           >
             {currentVideo.snippet.title}
@@ -22,6 +24,8 @@ function mainCard(props) {
         <p className='card-subtitle mb-2 text-muted'>
           <a
             href={`https://www.youtube.com/channel/${currentVideo.snippet.channelId}`}
+            target='_blank'
+            rel='noreferrer'
             className='text-muted text-decoration-none'
           >
             {currentVideo.snippet.channelTitle}
