@@ -11,7 +11,7 @@ import VideoList from './videoList';
 
 function Youtube() {
   const [currentVideo, setCurrentVideo] = useState(null);
-  const [videos, setVideos] = useState({});
+  const [videos, setVideos] = useState([]);
   const [noResponse, setNoResponse] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
