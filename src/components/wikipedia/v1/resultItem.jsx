@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { human_date } from '../../DateManipulate';
 
-function resultItem(props) {
+function ResultItem(props) {
   const result_body = useCallback(
     (node) => {
       if (node !== null) {
@@ -32,4 +32,4 @@ function resultItem(props) {
   );
 }
 
-export default resultItem;
+export default ResultItem;
