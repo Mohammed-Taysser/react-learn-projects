@@ -1,4 +1,5 @@
 import React from 'react';
+import { human_date } from '../../DateManipulate';
 
 function mainCard(props) {
   const { currentVideo } = props;
@@ -32,7 +33,9 @@ function mainCard(props) {
           </a>
         </p>
         <p className='card-text'>{`By ${currentVideo.snippet.description}`}</p>
-        <p className='card-text small text-muted'>{`Publish At ${currentVideo.snippet.publishTime}`}</p>
+        <p className='card-text small text-muted'>{`Publish At ${human_date(
+          currentVideo.snippet.publishTime
+        )}`}</p>
       </div>
     </div>
   );
