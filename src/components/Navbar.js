@@ -32,6 +32,7 @@ function NavBar(props) {
                 <li><hr className="dropdown-divider" /></li>
                 <li><Link className="dropdown-item" href="/wikipedia">Wikipedia</Link></li>
                 <li><Link className="dropdown-item" href="/google-translate">Google Translate</Link></li>
+                <li><Link className="dropdown-item" href="/blogs">blogs</Link></li>
               </ul>
             </li>
             <li className="nav-item"> <Link className="nav-link" href="/todo"> Todo's </Link> </li>
