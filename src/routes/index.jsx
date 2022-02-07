@@ -9,6 +9,7 @@ import GoogleTranslate from './googleTranslate';
 import Todo from './todo';
 import Songs from './songs';
 import Posts from './posts';
+import Blogs from './blogs';
 
 export default function index() {
   return (
@@ -22,6 +23,7 @@ export default function index() {
       <Todo />
       <Songs />
       <Posts />
+      <Blogs />
     </>
   );
 }
