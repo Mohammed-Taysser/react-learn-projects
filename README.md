@@ -140,6 +140,14 @@ Finally, import the newly created `.scss` file instead of the default Bootstrap 
 import './custom.scss';
 ```
 
+## Json Server
+
+thanks tp [`json server`](https://www.npmjs.com/package/json-server) for create a full fake REST API with zero coding in less than 30 seconds
+
+also create fake json using [`json-generator`](https://json-generator.com/)
+
+for image url use [`picsum.photos`](https://picsum.photos/)
+
 ## Available Scripts
 
 In the **project directory**, you can run:
@@ -149,6 +157,7 @@ In the **project directory**, you can run:
 - **`npm run build`** Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the **hashes**.
 - **`vercel`** Deploy the current directory
 - **`vercel --prod`** Create a production deployment
+- **`json_server`** start json server
 
 ## More Topics
 
