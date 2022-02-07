@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import PostList from './postList';
 import SearchBar from '../../SearchBar';
 import { PostsAPI } from '../../../api/Localhost';
@@ -11,7 +12,7 @@ function Blogs() {
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    onFormSubmit('we');
+    onFormSubmit('a');
   }, []);
 
   const onFormSubmit = async (query) => {
@@ -56,6 +57,11 @@ function Blogs() {
 
   return (
     <>
+      <div className='mb-3'>
+        <Link to='/blogs/v1/create' className='btn btn-dark'>
+          create new post
+        </Link>
+      </div>
       <SearchBar
         onFormSubmit={onFormSubmit}
         result_number={posts.length}
