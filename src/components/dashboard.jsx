@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from './CustomRouter';
+import { Link } from "react-router-dom";
 
 function Dashboard(props) {
   function version_items() {
     return props.versions.map((version, index) => (
-      <Link className='text-dark m-3' href={version.href} key={index}>
+      <Link className='text-dark m-3' to={version.href} key={index}>
         {version.title}
       </Link>
     ));

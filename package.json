@@ -11,6 +11,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
@@ -21,7 +22,7 @@
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
     "vercel-live": "CI=false vercel --prod",
-    "json_server":"json-server -w src/static/db.json -p 8080 -r src/static/routes.json ",
+    "json_server": "json-server -w src/static/db.json -p 8080 -r src/static/routes.json ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
