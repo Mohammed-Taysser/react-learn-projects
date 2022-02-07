@@ -20,8 +20,8 @@ function NavBar(props) {
           HOME
         </Link>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item"> <Link className="nav-link" href="/goelocation"> GeoLocation </Link> </li>
+          <ul className="navbar-nav me-auto mb-0">
+            <li className="nav-item"> <Link className="nav-link" href="/geolocation"> GeoLocation </Link> </li>
             <li className="nav-item dropdown">
               <Link className="nav-link dropdown-toggle" href="#" id="api-projects" role="button" dataBsToggle="dropdown" ariaExpanded="false">
                 API
@@ -31,7 +31,7 @@ function NavBar(props) {
                 <li><Link className="dropdown-item" href="/unsplash">Unsplash</Link></li>
                 <li><hr className="dropdown-divider" /></li>
                 <li><Link className="dropdown-item" href="/wikipedia">Wikipedia</Link></li>
-                <li><Link className="dropdown-item" href="/translate">Google Translate</Link></li>
+                <li><Link className="dropdown-item" href="/google-translate">Google Translate</Link></li>
               </ul>
             </li>
             <li className="nav-item"> <Link className="nav-link" href="/todo"> Todo's </Link> </li>
