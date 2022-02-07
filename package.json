@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "build": "CI=false react-scripts build",
     "vercel-live": "CI=false vercel --prod",
+    "json_server":"json-server -w src/static/db.json -p 8080 -r src/static/routes.json ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
