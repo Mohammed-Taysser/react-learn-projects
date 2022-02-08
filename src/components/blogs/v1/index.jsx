@@ -5,12 +5,13 @@ import SearchBar from '../../SearchBar';
 import { PostsAPI } from '../../../api/Localhost';
 import Alert from '../../bootstrap-component/Alert';
 import Spinner from '../../bootstrap-component/Spinner';
+import useDocumentTitle from '../../../hooks/useDocumentTitle';
 
 function Blogs() {
   const [posts, setPosts] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-
+  useDocumentTitle('Blogs v1 | Homepage');
   useEffect(() => {
     onFormSubmit('a');
   }, []);

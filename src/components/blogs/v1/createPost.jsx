@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { human_date } from '../../DateManipulate';
 import { PostsAPI } from '../../../api/Localhost';
+import useDocumentTitle from '../../../hooks/useDocumentTitle';
 
 function CreateBlog() {
   const [postTitle, setPostTitle] = useState('');
@@ -10,6 +11,7 @@ function CreateBlog() {
   const [postTags, setPostTags] = useState('');
   const [postIsActive, setPostIsActive] = useState(true);
   const [postImage, setPostImage] = useState('');
+  useDocumentTitle('Blogs v1 | Create New Post');
 
   const onFormSubmit = async (e) => {
     const post_id = random_id();

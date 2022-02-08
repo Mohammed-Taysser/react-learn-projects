@@ -5,12 +5,14 @@ import { human_date } from '../../DateManipulate';
 import { PostsAPI } from '../../../api/Localhost';
 import Alert from '../../bootstrap-component/Alert';
 import Spinner from '../../bootstrap-component/Spinner';
+import useDocumentTitle from '../../../hooks/useDocumentTitle';
 
 function BlogDetails() {
   let params = useParams();
   const [currentPost, setCurrentPost] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('second');
+  useDocumentTitle('Blogs v1 | Post Details');
 
   useEffect(() => {
     getPostDetails();

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { PostsAPI } from '../../../api/Localhost';
+import useDocumentTitle from '../../../hooks/useDocumentTitle';
 
 function CreateBlog() {
   let params = useParams();
@@ -12,6 +13,7 @@ function CreateBlog() {
   const [postTags, setPostTags] = useState('');
   const [postIsActive, setPostIsActive] = useState(true);
   const [postImage, setPostImage] = useState('');
+  useDocumentTitle('Blogs v1 | Update Post');
 
   useEffect(() => {
     get_current_post();
