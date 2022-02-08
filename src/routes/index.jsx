@@ -28,7 +28,7 @@ import GoogleTranslateV1 from '../components/googleTranslate/v1';
 
 import BlogsDashboard from '../components/blogs';
 import BlogsV1 from '../components/blogs/v1';
-import BlogsDetailsV1 from '../components/blogs/v1/blogDetails';
+import BlogsDetailsV1 from '../components/blogs/v1/postDetails';
 import BlogsCreateV1 from '../components/blogs/v1/createPost';
 
 import Songs from '../components/songs/v1';
