@@ -30,6 +30,7 @@ import BlogsDashboard from '../components/blogs';
 import BlogsV1 from '../components/blogs/v1';
 import BlogsDetailsV1 from '../components/blogs/v1/postDetails';
 import BlogsCreateV1 from '../components/blogs/v1/createPost';
+import BlogsUpdateV1 from '../components/blogs/v1/updatePost';
 
 import Songs from '../components/songs/v1';
 import songsReducers from '../redux-reducers/songsReducers';
@@ -63,6 +64,7 @@ export default function index() {
         <Route path='blogs/v1' element={<BlogsV1 />} />
         <Route path='blogs/v1/:postId' element={<BlogsDetailsV1 />} />
         <Route path='blogs/v1/create' element={<BlogsCreateV1 />} />
+        <Route path='blogs/v1/update/:postId' element={<BlogsUpdateV1 />} />
 
         <Route path='todo' element={<TodoDashboard />} />
         <Route path='todo/v1' element={<TodoV1 tasks={TASKS} />} />
