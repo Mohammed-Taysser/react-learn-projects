@@ -105,8 +105,9 @@ function BlogDetails() {
                     ))
                   : ' no tags'}
               </div>
-              <div className="mt-3">
-                <button className='btn btn-danger btn-sm' onClick={delete_post}> Delete Post</button>
+              <div className="mt-4">
+                <button className='btn btn-outline-danger btn-sm' onClick={delete_post}> Delete Post</button>
+                <Link className='btn btn-dark btn-sm mx-2' to={`/blogs/v1/update/${params.postId}`}> Update Post</Link>
               </div>
             </div>
           </div>
