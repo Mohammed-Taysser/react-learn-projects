@@ -7,6 +7,8 @@ import { createStore, applyMiddleware } from 'redux';
 import Homepage from '../components/homepage';
 import PageNotFound from '../components/404';
 
+import Login from '../components/auth/login';
+
 import YouTubeDashboard from '../components/youtube';
 import YouTubeV1 from '../components/youtube/v1';
 import YouTubeV2 from '../components/youtube/v2';
@@ -46,6 +48,7 @@ export default function index() {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='*' element={<PageNotFound />} />
+        <Route path='/login' element={<Login />} />
 
         <Route path='youtube' element={<YouTubeDashboard />} />
         <Route path='youtube/v1' element={<YouTubeV1 />} />
