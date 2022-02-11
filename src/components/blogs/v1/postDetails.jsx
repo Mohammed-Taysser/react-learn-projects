@@ -43,8 +43,8 @@ function BlogDetails() {
       });
   };
 
-  const delete_post = () =>{
-    PostsAPI.delete(`/${params.postId}`,{})
+  const delete_post = () => {
+    PostsAPI.delete(`/${params.postId}`, {})
       .then((response) => {
         window.location.href = '/blogs/v1/';
       })
@@ -54,7 +54,7 @@ function BlogDetails() {
       .then(() => {
         // always executed
       });
-  }
+  };
 
   const render_message = () => {
     if (currentPost.length > 0) {
@@ -95,7 +95,7 @@ function BlogDetails() {
               </h6>
               <p className=''>{current_post.about}</p>
               <div className=''>
-                tags: 
+                tags:
                 {current_post.tags.length > 0
                   ? current_post.tags.map((tag, index) => (
                       <span
@@ -107,9 +107,19 @@ function BlogDetails() {
                     ))
                   : ' no tags'}
               </div>
-              <div className="mt-4">
-                <button className='btn btn-outline-danger btn-sm' onClick={delete_post}> Delete Post</button>
-                <Link className='btn btn-dark btn-sm mx-2' to={`/blogs/v1/update/${params.postId}`}> Update Post</Link>
+              <div className='mt-4'>
+                <button
+                  className='btn btn-outline-danger btn-sm'
+                  onClick={delete_post}
+                >
+                  Delete Post
+                </button>
+                <Link
+                  className='btn btn-dark btn-sm mx-2'
+                  to={`/blogs/v1/update/${params.postId}`}
+                >
+                  Update Post
+                </Link>
               </div>
             </div>
           </div>
@@ -120,6 +130,23 @@ function BlogDetails() {
 
   return (
     <>
+      <nav aria-label='breadcrumb'>
+        <ol className='breadcrumb'>
+          <li className='breadcrumb-item'>
+            <Link className='' to='/'>
+              Home
+            </Link>
+          </li>
+          <li className='breadcrumb-item'>
+            <Link className='' to='/blogs/v1'>
+              Blogs
+            </Link>
+          </li>
+          <li className='breadcrumb-item active' aria-current='page'>
+            {currentPost[0] && currentPost[0].title}
+          </li>
+        </ol>
+      </nav>
       <div className=''>{render_message()}</div>
     </>
   );
