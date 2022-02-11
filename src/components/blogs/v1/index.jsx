@@ -67,6 +67,7 @@ function Blogs() {
         onFormSubmit={onFormSubmit}
         result_number={posts.length}
         className='mb-4'
+        variant='dark'
       />
       <div className='row justify-content-center align-items-stretch'>
         {render_message()}
