@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 
-import Homepage from '../components/homepage';
-import PageNotFound from '../components/404';
+import Homepage from '../pages/homepage';
+import PageNotFound from '../pages/404';
 
 import Login from '../components/auth/login';
 
