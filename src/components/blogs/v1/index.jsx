@@ -35,10 +35,10 @@ function Blogs() {
 
   const get_api_post = async () => {
     await PostsAPI.get(``, {
-      params: { title_like: userQuery, _page: currentPageNumber, _limit: 12 },
+      params: { title_like: userQuery, },
     })
       .then((response) => {
-        manipulate_pagination_links(response);
+        // manipulate_pagination_links(response);
         setPosts(response.data);
         setHasError(false);
         if (response.data.length === 0) {
