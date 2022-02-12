@@ -69,9 +69,23 @@ function NavBar(props) {
                     Google Translate
                   </Link>
                 </li>
+              </ul>
+            </li>
+            <li className='nav-item dropdown'>
+              <Link
+                className='nav-link dropdown-toggle'
+                to='#'
+                id='localhost-api'
+                role='button'
+                data-bs-toggle='dropdown'
+                aria-expanded='false'
+              >
+                Localhost
+              </Link>
+              <ul className='dropdown-menu' aria-labelledby='localhost-api'>
                 <li>
                   <Link className='dropdown-item' to='/blogs'>
-                    blogs
+                    Blogs
                   </Link>
                 </li>
               </ul>
