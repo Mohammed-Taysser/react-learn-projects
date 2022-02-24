@@ -35,10 +35,13 @@ import BlogsCreateV1 from '../components/blogs/v1/createPost';
 import BlogsUpdateV1 from '../components/blogs/v1/updatePost';
 
 import Songs from '../components/songs/v1';
-import songsReducers from '../redux-reducers/songsReducers';
+import songsReducers from '../redux/reducers/songs/songsReducers';
 
 import Posts from '../components/posts';
-import postReducers from '../redux-reducers/posts';
+import postReducers from '../redux/reducers/posts';
+
+import CakeShop from '../components/cakes/v1';
+import CakeShopStore from '../redux/stores/cakes';
 
 import { TASKS, SONGS, LANGUAGES } from '../static/Data';
 
@@ -89,10 +92,16 @@ export default function index() {
         <Route
           path='/posts'
           element={
-            <Provider
-              store={createStore(postReducers, applyMiddleware(thunk))}
-            >
+            <Provider store={createStore(postReducers, applyMiddleware(thunk))}>
               <Posts />
+            </Provider>
+          }
+        />
+        <Route
+          path='/cakes'
+          element={
+            <Provider store={CakeShopStore}>
+              <CakeShop />
             </Provider>
           }
         />
