@@ -38,7 +38,7 @@ import Songs from '../components/songs/v1';
 import songsReducers from '../redux-reducers/songsReducers';
 
 import Posts from '../components/posts';
-import postsReducers from '../redux-reducers/postsReducers';
+import postReducers from '../redux-reducers/posts';
 
 import { TASKS, SONGS, LANGUAGES } from '../static/Data';
 
@@ -90,7 +90,7 @@ export default function index() {
           path='/posts'
           element={
             <Provider
-              store={createStore(postsReducers, applyMiddleware(thunk))}
+              store={createStore(postReducers, applyMiddleware(thunk))}
             >
               <Posts />
             </Provider>
