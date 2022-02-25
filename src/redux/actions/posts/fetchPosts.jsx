@@ -1,11 +1,11 @@
-import jsonPlaceHolder from '../api/jsonPlaceHolder';
+import jsonPlaceHolder from '../../../api/jsonPlaceHolder';
 
 function fetchPosts() {
   return async (dispatch, getState) => {
-    const posts = await jsonPlaceHolder.get('/posts');
+    const response = await jsonPlaceHolder.get('/posts');
     dispatch({
       type: 'FETCH_POSTS',
-      payload: posts,
+      payload: response.data,
     });
   };
 }

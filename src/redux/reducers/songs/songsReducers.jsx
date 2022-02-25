@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { SONGS } from '../static/Data';
+import { SONGS } from '../../../static/Data';
 
 function songReducer() {
   return SONGS;
