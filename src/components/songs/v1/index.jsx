@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { selectSong } from '../../../redux-actions/songs/selectSong';
+import { selectSong } from '../../../redux/actions/songs/selectSong';
 import SongList from './songsList';
 import SongDetails from './songDetails';
 
