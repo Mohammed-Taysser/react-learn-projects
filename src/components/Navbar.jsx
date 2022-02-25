@@ -113,6 +113,11 @@ function NavBar(props) {
                   </Link>
                 </li>
                 <li>
+                  <Link className='dropdown-item' to='/cakes'>
+                    Cakes
+                  </Link>
+                </li>
+                <li>
                   <hr className='dropdown-divider' />
                 </li>
                 <li>
