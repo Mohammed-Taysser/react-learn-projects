@@ -43,6 +43,8 @@ import postReducers from '../redux/reducers/posts';
 import CakeShop from '../components/cakes/v1';
 import CakeShopStore from '../redux/stores/cakes';
 
+import Streams from '../components/streams'
+
 import { TASKS, SONGS, LANGUAGES } from '../static/Data';
 
 export default function index() {
@@ -105,6 +107,7 @@ export default function index() {
             </Provider>
           }
         />
+        <Route path='/streams' element={<Streams />} />
       </Routes>
     </>
   );
