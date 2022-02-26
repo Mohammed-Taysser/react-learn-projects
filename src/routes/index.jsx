@@ -43,7 +43,12 @@ import postReducers from '../redux/reducers/posts';
 import CakeShop from '../components/cakes/v1';
 import CakeShopStore from '../redux/stores/cakes';
 
-import Streams from '../components/streams'
+import Streams from '../components/streams';
+import CreateStream from '../components/streams/CreateStream';
+import DeleteStream from '../components/streams/DeleteStream';
+import EditStream from '../components/streams/EditStream';
+import ShowStream from '../components/streams/ShowStream';
+import StreamsStore from '../redux/stores/streams';
 
 import { TASKS, SONGS, LANGUAGES } from '../static/Data';
 
@@ -107,7 +112,46 @@ export default function index() {
             </Provider>
           }
         />
-        <Route path='/streams' element={<Streams />} />
+        <Route
+          path='/streams'
+          element={
+            <Provider store={StreamsStore}>
+              <Streams />
+            </Provider>
+          }
+        />
+        <Route
+          path='/streams/create'
+          element={
+            <Provider store={StreamsStore}>
+              <CreateStream />
+            </Provider>
+          }
+        />
+        <Route
+          path='/streams/edit/:id'
+          element={
+            <Provider store={StreamsStore}>
+              <EditStream />
+            </Provider>
+          }
+        />
+        <Route
+          path='/streams/delete/:id'
+          element={
+            <Provider store={StreamsStore}>
+              <DeleteStream />
+            </Provider>
+          }
+        />
+        <Route
+          path='/streams/:id'
+          element={
+            <Provider store={StreamsStore}>
+              <ShowStream />
+            </Provider>
+          }
+        />
       </Routes>
     </>
   );
