@@ -12,5 +12,9 @@ const UsersAPI = axios.create({
   baseURL: 'http://localhost:8080/users',
 });
 
+const StreamsAPI = axios.create({
+  baseURL: 'http://localhost:8080/streams',
+});
+
 export default base_url;
-export { base_url, PostsAPI, UsersAPI };
+export { base_url, PostsAPI, UsersAPI, StreamsAPI };
