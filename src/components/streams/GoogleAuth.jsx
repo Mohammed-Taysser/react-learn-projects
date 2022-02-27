@@ -4,7 +4,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { GoSignOut } from 'react-icons/go';
 import { SignIn, SignOut } from '../../redux/actions/streams';
 import { useIsSignedIn, useUserId } from '../../redux/selectors/streams';
-import 'https://apis.google.com/js/platform.js';
+import '../../assets/js/platform.min.js';
 
 function GoogleAuth() {
   const dispatch = useDispatch();
