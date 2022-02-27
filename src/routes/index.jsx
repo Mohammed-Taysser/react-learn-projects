@@ -45,7 +45,6 @@ import CakeShopStore from '../redux/stores/cakes';
 
 import Streams from '../components/streams';
 import CreateStream from '../components/streams/CreateStream';
-import DeleteStream from '../components/streams/DeleteStream';
 import EditStream from '../components/streams/EditStream';
 import ShowStream from '../components/streams/ShowStream';
 import StreamsStore from '../redux/stores/streams';
@@ -133,14 +132,6 @@ export default function index() {
           element={
             <Provider store={StreamsStore}>
               <EditStream />
-            </Provider>
-          }
-        />
-        <Route
-          path='/streams/delete/:id'
-          element={
-            <Provider store={StreamsStore}>
-              <DeleteStream />
             </Provider>
           }
         />
