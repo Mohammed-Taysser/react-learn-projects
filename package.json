@@ -9,6 +9,7 @@
     "axios": "^0.24.0",
     "bootstrap": "^5.1.3",
     "json-server": "^0.17.0",
+    "node-media-server": "^2.3.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
@@ -25,6 +26,7 @@
     "build": "CI=false react-scripts build",
     "vercel-live": "CI=false vercel --prod",
     "json_server": "json-server -w src/api/json-server/db.json -p 8080 -r src/api/json-server/routes.json ",
+    "node-media-server": "node src/api/node-media-server/SingleCore.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
