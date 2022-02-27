@@ -9,7 +9,7 @@ const CONFIG = {
     ping_timeout: 60
   },
   http: {
-    port: 8888,
+    port: 8000,
     allow_origin: '*'
   }
 };
