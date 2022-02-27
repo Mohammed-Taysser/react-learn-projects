@@ -24,8 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
-    "vercel-live": "CI=false vercel --prod",
+    "build": "DISABLE_ESLINT_PLUGIN=true CI=false react-scripts build",
+    "vercel-live": "DISABLE_ESLINT_PLUGIN=true CI=false vercel --prod",
     "json_server": "json-server -w src/api/json-server/db.json -p 8080 -r src/api/json-server/routes.json ",
     "node-media-server": "node src/api/node-media-server/SingleCore.js",
     "test": "react-scripts test",
