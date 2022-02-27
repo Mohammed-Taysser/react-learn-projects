@@ -125,6 +125,11 @@ function NavBar(props) {
                     Posts
                   </Link>
                 </li>
+                <li>
+                  <Link className='dropdown-item' to='/streams'>
+                    Streams
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>
