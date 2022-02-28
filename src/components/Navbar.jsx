@@ -1,15 +1,26 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FcGlobe } from 'react-icons/fc';
 import AuthContext from './context/auth';
+import LanguageContext from './context/language';
 
 function NavBar(props) {
   const auth_context = useContext(AuthContext);
+  const language_context = useContext(LanguageContext);
+
   const onLogoutClick = (e) => {
     e.preventDefault();
     auth_context.setIsAuth(false);
     auth_context.setUserId(null);
     localStorage.removeItem('auth');
   };
+
+  const onLanguageChange = (evt) => {
+    evt.preventDefault();
+
+    language_context.setLanguage(evt.target.getAttribute('data-language'));
+  };
+
   return (
     <nav className='navbar navbar-expand-md navbar-dark bg-dark py-3'>
       <div className='container'>
@@ -133,7 +144,45 @@ function NavBar(props) {
               </ul>
             </li>
           </ul>
-          <ul className='navbar-nav ms-auto mb-0'>
+          <ul className='navbar-nav ms-auto mb-0 align-items-center'>
+            <li className='nav-item dropdown'>
+              <Link
+                className='nav-link dropdown-toggle'
+                to='#'
+                id='project-language'
+                role='button'
+                data-bs-toggle='dropdown'
+                aria-expanded='false'
+              >
+                <FcGlobe className='h4 m-0' />
+              </Link>
+              <ul className='dropdown-menu' aria-labelledby='project-language'>
+                <li>
+                  <a
+                    className={`dropdown-item ${
+                      language_context.language === 'english' ? 'active' : ''
+                    }`}
+                    href='#english'
+                    data-language='english'
+                    onClick={onLanguageChange}
+                  >
+                    🇺🇸 English
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={`dropdown-item ${
+                      language_context.language === 'arabic' ? 'active' : ''
+                    }`}
+                    href='#arabic'
+                    data-language='arabic'
+                    onClick={onLanguageChange}
+                  >
+                    🇪🇬 العربية
+                  </a>
+                </li>
+              </ul>
+            </li>
             {auth_context.isAuth ? (
               <>
                 <li className='nav-item'>
