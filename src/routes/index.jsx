@@ -48,6 +48,8 @@ import CreateStream from '../components/streams/CreateStream';
 import EditStream from '../components/streams/EditStream';
 import ShowStream from '../components/streams/ShowStream';
 import StreamsStore from '../redux/stores/streams';
+import OpenWeatherMap from '../projects/open-weather-map';
+import OpenWeatherMapStore from '../redux/stores/open-weather-map';
 
 import { TASKS, SONGS, LANGUAGES } from '../static/Data';
 
@@ -140,6 +142,14 @@ export default function index() {
           element={
             <Provider store={StreamsStore}>
               <ShowStream />
+            </Provider>
+          }
+        />
+        <Route
+          path='/open-weather-map'
+          element={
+            <Provider store={OpenWeatherMapStore}>
+              <OpenWeatherMap />
             </Provider>
           }
         />

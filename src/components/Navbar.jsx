@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FcGlobe } from 'react-icons/fc';
-import {Context as AuthContext} from './context/auth';
-import {Context as LanguageContext} from './context/language';
+import { Context as AuthContext } from './context/auth';
+import { Context as LanguageContext } from './context/language';
 
 function NavBar(props) {
   const auth_context = useContext(AuthContext);
@@ -139,6 +139,11 @@ function NavBar(props) {
                 <li>
                   <Link className='dropdown-item' to='/streams'>
                     Streams
+                  </Link>
+                </li>
+                <li>
+                  <Link className='dropdown-item' to='/open-weather-map'>
+                    open weather map
                   </Link>
                 </li>
               </ul>
